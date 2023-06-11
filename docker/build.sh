@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-AWS_DEFAULT_REGION=eu-west-1
-AWS_ACCOUNT={replacewithyourawsaccount}
+AWS_DEFAULT_REGION=us-west-1
+AWS_ACCOUNT=314374386591
 AWS_ECR_REPO=keycloak
 COMMIT_HASH="21.1.1"
 
@@ -27,7 +27,7 @@ fi
 
 # Build initial image and upload to ECR Repo
 
-docker build -t $REPOSITORY_URI:latest .
+docker build --platform=linux/amd64 -t $REPOSITORY_URI:latest .
 docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$AMD_TAG
 docker push $REPOSITORY_URI:$AMD_TAG
 

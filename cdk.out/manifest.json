@@ -1,0 +1,501 @@
+{
+  "version": "32.0.0",
+  "artifacts": {
+    "keycloakauth.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "keycloakauth.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "keycloakauth": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://314374386591/us-east-1",
+      "properties": {
+        "templateFile": "keycloakauth.template.json",
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::314374386591:role/cdk-hnb659fds-deploy-role-314374386591-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::314374386591:role/cdk-hnb659fds-cfn-exec-role-314374386591-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-314374386591-us-east-1/6bc7c5e2fadd3bca999b99aafd0102f51a0eb47d4f14562a836a5543bc9f8ba0.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "keycloakauth.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::314374386591:role/cdk-hnb659fds-lookup-role-314374386591-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "keycloakauth.assets"
+      ],
+      "metadata": {
+        "/keycloakauth/KeyCloak/KCSecret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKCSecretF8498E5C"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcF3901B3A"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet1Subnet0762DA88"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet1RouteTable841A709E"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet1RouteTableAssociationFF91B678"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet1DefaultRoute438FBE69"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet1/EIP": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet1EIP6EA2ED08"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet1/NATGateway": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet1NATGateway923A52EE"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet2Subnet22049636"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet2RouteTableBE60E8CF"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet2RouteTableAssociation3117C73A"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet2DefaultRouteCFC19404"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet3Subnet727591F1"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet3RouteTable479EEAD8"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet3RouteTableAssociation381AE091"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PublicSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPublicSubnet3DefaultRouteC1D6BB3A"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet1/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet1SubnetA692DFFF"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet1/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet1RouteTableD1A04A09"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet1/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet1RouteTableAssociationD9158DB8"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet1/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet1DefaultRouteA309AD23"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet2/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet2SubnetC8682D75"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet2/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet2RouteTableEB13A8EA"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet2/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet2RouteTableAssociation4BA8795B"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet2/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet2DefaultRoute8D3CC7CF"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet3/Subnet": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet3SubnetE1955755"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet3/RouteTable": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet3RouteTable16F8DA73"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet3/RouteTableAssociation": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet3RouteTableAssociationEEA47270"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/PrivateSubnet3/DefaultRoute": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcPrivateSubnet3DefaultRoute69A2CD69"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/IGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcIGW69251108"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/VPCGW": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcVPCGW23A2D9CE"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Vpc/RestrictDefaultSecurityGroupCustomResource/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakVpcRestrictDefaultSecurityGroupCustomResourceB18D9569"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/Subnets/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBClusterSubnetsE36F1B1B"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/SecurityGroup": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Ignoring Egress rule since 'allowAllOutbound' is set to true; To add customized rules, set allowAllOutbound=false on the SecurityGroup",
+            "trace": [
+              "Annotations.addMessage (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1071)",
+              "Annotations.addWarning (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/core/lib/annotations.js:1:504)",
+              "SecurityGroup.addEgressRule (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ec2/lib/security-group.js:1:7237)",
+              "/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:3083",
+              "ReactiveList.forEachAndForever (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:5789)",
+              "/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:2987",
+              "ReactiveList.forEachAndForever (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:5789)",
+              "Connections.allowInternally (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ec2/lib/connections.js:1:2928)",
+              "new Database (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/cdk-keycloak/lib/keycloak.js:185:28)",
+              "KeyCloak.addDatabase (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/cdk-keycloak/lib/keycloak.js:143:16)",
+              "new KeyCloak (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/cdk-keycloak/lib/keycloak.js:106:24)",
+              "Kernel._create (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:9964:29)",
+              "Kernel.create (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:9693:29)",
+              "KernelHost.processRequest (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:11544:36)",
+              "KernelHost.run (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:11504:22)",
+              "Immediate._onImmediate (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:11505:46)",
+              "process.processImmediate (node:internal/timers:471:21)"
+            ]
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBClusterSecurityGroup843B4392"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/SecurityGroup/from keycloakauthKeyCloakDatabaseDBClusterSecurityGroupFB149FA4:3306": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBClusterSecurityGroupfromkeycloakauthKeyCloakDatabaseDBClusterSecurityGroupFB149FA4330637E7B46E"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/SecurityGroup/from keycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9B:{IndirectPort}": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBClusterSecurityGroupfromkeycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9BIndirectPortD1D2DFFA"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/Secret/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "keycloakauthKeyCloakDatabaseDBClusterSecretD6B584933fdaad7efa858a3daf9490cf0a702aeb"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/Secret/Attachment/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBClusterSecretAttachment50401C92"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBCluster06E9C0E1"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/Instance1": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBClusterInstance12532FD3D"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBCluster/Instance2": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBClusterInstance2EE80EFE4"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/DBSecretArn": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseDBSecretArn28BEB641"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/clusterEndpointHostname": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseclusterEndpointHostname38FB0D1E"
+          }
+        ],
+        "/keycloakauth/KeyCloak/Database/clusterIdentifier": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakDatabaseclusterIdentifierF00C290B"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/keycloak_s3_ping/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivcekeycloaks3pingA0B30CB4"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/Cluster/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceClusterA18E44FF"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceTaskRole0658CED2"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/TaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceTaskRoleDefaultPolicyA2321E87"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/TaskDef/TaskRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceTaskDefTaskRole0DC4D418"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/TaskDef/TaskRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceTaskDefTaskRoleDefaultPolicyE26BE579"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/TaskDef/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceTaskDef30C9533A"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/TaskDef/keycloak": [
+          {
+            "type": "aws:cdk:warning",
+            "data": "Proper policies need to be attached before pulling from ECR repository, or use 'fromEcrRepository'.",
+            "trace": [
+              "Annotations.addMessage (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/core/lib/annotations.js:1:1071)",
+              "Annotations.addWarning (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/core/lib/annotations.js:1:504)",
+              "RepositoryImage.bind (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ecs/lib/images/repository.js:1:1129)",
+              "new ContainerDefinition (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ecs/lib/container-definition.js:1:2908)",
+              "FargateTaskDefinition.addContainer (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/aws-cdk-lib/aws-ecs/lib/base/task-definition.js:1:8979)",
+              "new ContainerService (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/cdk-keycloak/lib/keycloak.js:390:35)",
+              "KeyCloak.addKeyCloakContainerService (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/cdk-keycloak/lib/keycloak.js:146:16)",
+              "new KeyCloak (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/jsii-kernel-cuEhTE/node_modules/cdk-keycloak/lib/keycloak.js:120:47)",
+              "Kernel._create (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:9964:29)",
+              "Kernel.create (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:9693:29)",
+              "KernelHost.processRequest (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:11544:36)",
+              "KernelHost.run (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:11504:22)",
+              "Immediate._onImmediate (/private/var/folders/qd/fvd03vbx03j0z7qptgh1m2kh0000gp/T/tmpddxrsjvf/lib/program.js:11505:46)",
+              "process.processImmediate (node:internal/timers:471:21)"
+            ]
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/LogGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceLogGroup010F2AAE"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/Service/Service": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceService79D3F427"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/Service/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceServiceSecurityGroup4C80023D"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/Service/SecurityGroup/from keycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9B:7800": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceServiceSecurityGroupfromkeycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9B780086982980"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/Service/SecurityGroup/from keycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9B:57800": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceServiceSecurityGroupfromkeycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9B578004962A670"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/Service/SecurityGroup/from keycloakauthKeyCloakKeyCloakContainerSerivceALBSecurityGroupCEA6463A:8080": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceServiceSecurityGroupfromkeycloakauthKeyCloakKeyCloakContainerSerivceALBSecurityGroupCEA6463A8080711BB1EF"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/ALB/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceALBE100B67D"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/ALB/SecurityGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceALBSecurityGroup8F5103C6"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/ALB/SecurityGroup/to keycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9B:8080": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceALBSecurityGrouptokeycloakauthKeyCloakKeyCloakContainerSerivceServiceSecurityGroup33D15F9B8080BC8D9E99"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/ALB/HttpsListener/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceALBHttpsListener140F85B9"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/ALB/HttpsListener/ECSTargetGroup/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceALBHttpsListenerECSTargetGroupCE3EF52C"
+          }
+        ],
+        "/keycloakauth/KeyCloak/KeyCloakContainerSerivce/EndpointURL": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakKeyCloakContainerSerivceEndpointURL9C81E19A"
+          }
+        ],
+        "/keycloakauth/Custom::VpcRestrictDefaultSGCustomResourceProvider/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderRole26592FE0"
+          }
+        ],
+        "/keycloakauth/Custom::VpcRestrictDefaultSGCustomResourceProvider/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CustomVpcRestrictDefaultSGCustomResourceProviderHandlerDC833E5E"
+          }
+        ],
+        "/keycloakauth/KeyCloakSecret": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "KeyCloakSecret"
+          }
+        ],
+        "/keycloakauth/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/keycloakauth/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/keycloakauth/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "keycloakauth"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
